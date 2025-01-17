@@ -1,0 +1,7 @@
+WITH cte AS( SELECT d.name AS Department ,e.salary , e.name AS Employee , MAX(e.salary) OVER(PARTITION BY e.departmentId) AS max_Salary
+FROM Employee e LEFT JOIN Department d
+ON e.departmentId = d.id)
+
+SELECT Department , Employee , Salary
+FROM cte
+WHERE max_Salary = salary
