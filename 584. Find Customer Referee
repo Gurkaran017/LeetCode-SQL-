@@ -1,4 +1,4 @@
 
 select name from Customer where referee_id <> '2' OR referee_id is null;
-// OR YOU CAN WRITE CODE BELOW
+// OR YOU CAN WRITE THE CODE BELOW
 -- select name from Customer where referee_id != '2' OR referee_id is null; --
